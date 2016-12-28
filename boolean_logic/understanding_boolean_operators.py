@@ -30,7 +30,11 @@ def generating_input_table(func):
         do_flip *= 2
         inputs.append(tmp)
     results = []
-    for elem in len(input[0] )
+    for elem in range(len(inputs[0])):
+        input_val = [inputs[ind][elem] for ind in range(len(args))]
+        results.append(bool_to_int(func(*input_val)))
+    args.append("results")
+    inputs.append(results)
     return pd.DataFrame({args[ind]:inputs[ind] for ind in range(len(args))})
     
 
