@@ -102,6 +102,8 @@ def simple_implication(x,y):
     return (not x) or y
 
 def multi_implication(*args):
+    """
+    Here the fu
     inputs = *args
     result = inputs[0]
     for elem in inputs[1:]:
