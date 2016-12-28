@@ -35,9 +35,12 @@ def generating_input_table(func):
         results.append(bool_to_int(func(*input_val)))
     args.append("results")
     inputs.append(results)
-    return pd.DataFrame({args[ind]:inputs[ind] for ind in range(len(args))})
+    df = pd.DataFrame({args[ind]:inputs[ind] for ind in range(len(args))})
+    cols = df.columns.tolist()
+    cols.remove("results")
+    cols.append("results")
+    return df[cols]
     
-
 def example_func(x,y,z):
     return (x and y) or z
 
