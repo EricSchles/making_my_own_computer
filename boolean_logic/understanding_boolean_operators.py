@@ -8,7 +8,13 @@ def sign_flip(sign):
     else:
         return 0
 
-def generating_table(func):
+def bool_to_int(value):
+    if value:
+        return 1
+    else:
+        return 0
+    
+def generating_input_table(func):
     args = inspect.getargspec(func).args
     length_of_row = int(math.pow(2,len(args)))
     total_num_elements = length_of_row * len(args)
@@ -23,10 +29,13 @@ def generating_table(func):
             tmp.append(sign)
         do_flip *= 2
         inputs.append(tmp)
-    return inputs
+    results = []
+    for elem in len(input[0] )
+    return pd.DataFrame({args[ind]:inputs[ind] for ind in range(len(args))})
+    
 
 def example_func(x,y,z):
     return (x and y) or z
 
 if __name__ == '__main__':
-    print(generating_table(example_func))
+    print(generating_input_table(example_func))
