@@ -16,6 +16,8 @@ def multi_and(*args):
         result = result and elem
     return result
 
+def simple_or(x,y):
+    retur
 MG = nx.MultiGraph()
 
 
