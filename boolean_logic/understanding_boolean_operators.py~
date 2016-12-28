@@ -1,0 +1,2 @@
+def generating_table(func):
+    
