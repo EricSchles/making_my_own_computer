@@ -50,7 +50,25 @@ def choose_param(*args,index=0):
     return *args[index]
 
 def simple_xor(x,y):
-    
+    return (x and (not y)) or ((not x) and y)
+
+def multi_xor(*args):
+    inputs = *args
+    result = inputs[0]
+    for elem in inputs[1:]:
+        result = simple_xor(result, elem)
+    return result
+
+def simple_or(x,y):
+    return x or y
+
+def multi_or(*args):
+    inputs = *args
+    result = inputs[0]
+    for elem in inputs[1:]:
+        result = result or elem
+    return result
+
 MG = nx.MultiGraph()
 
 
