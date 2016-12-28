@@ -1,0 +1,3 @@
+from pshr import pusher as p
+
+p.main(msg="updating",continuous=True,sleep_for=300)
