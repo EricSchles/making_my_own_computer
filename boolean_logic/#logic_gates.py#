@@ -50,7 +50,7 @@ def choose_param(*args,index=0):
     return *args[index]
 
 def simple_xor(x,y):
-    
+    return x
 MG = nx.MultiGraph()
 
 
