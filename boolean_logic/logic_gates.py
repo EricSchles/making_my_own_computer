@@ -69,6 +69,29 @@ def multi_or(*args):
         result = result or elem
     return result
 
+def simple_nor(x,y):
+    return not (x or y)
+
+def multi_nor(*args):
+    inputs = *args
+    result = inputs[0]
+    for elem in inputs[1:]:
+        result = simple_nor(result, elem)
+    return result
+
+def simple_equivalence(x,y):
+    return (x and y) or ((not x) and (not y))
+
+def multi_equivalence(*args):
+    inputs = *args
+    result = inputs[0]
+    for elem in inputs[1:]:
+        result = simple_equivalence(result, elem)
+    return result
+
+def 
+
+
 MG = nx.MultiGraph()
 
 
